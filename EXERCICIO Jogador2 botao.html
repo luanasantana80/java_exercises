@@ -1,0 +1,25 @@
+<!doctype html> 
+<html lang="pt-br">
+	<head>
+		<title>Curso javascript</title>
+		<meta chatset="UTF-8">
+        <script>
+            function load(){
+                document.addEventListener("keydown", tecla);
+            }
+            function tecla(){
+                var vtecla=event.keyCode;
+                if(tecla==17){
+                   alert("Tecla <<enter>> pressionada. \n \n O evento será removido. \n \n")
+                   document.removeEventListener("keydown", tecla);
+                }else{
+                    alert("Tecla pressionada: "+vtecla)
+                }
+            }
+            window.addEventListener("load", load);
+        </script>
+	</head>
+	<body>
+        <div id="jogador"></div>
+    </body>
+</html>

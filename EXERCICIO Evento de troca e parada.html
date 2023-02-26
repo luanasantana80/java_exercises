@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>CURSO JAVASCRIPT</title>
+        <meta charset="UTF-8">
+        <script>
+            var cores=["#F00","#0F0","#00F","#FF0","#0FF","#F0F","#000","#FFF"];
+            var i=0;
+            var timer;
+            function mudaCorFundo(){
+                document.body.style.backgroundColor=cores[i];
+                i++;
+                if(i>=cores.length){
+                    i=0;
+                }
+            }
+            function iniciar(){
+                clearInterval(timer);
+                timer=setInterval(mudaCorFundo,1000);
+            }
+            function parar(){
+                clearInterval(timer);
+                document.getElementById("bt_ini").value="Continuar troca";
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Iniciar troca" id="bt_ini" onclick="iniciar()"><br>
+        <input type="button" value="Parar troca" onclick="parar()">
+    </body>
+</hmtl>

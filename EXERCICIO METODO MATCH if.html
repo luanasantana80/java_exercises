@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>curso de JavaScript</title>
+        <meta charset="UTF-8">
+        <script>
+            var texto="Curso de jvascript - FATEC , com FATEC";
+            var resultado=texto.match(/FATEC/g);
+            if(resultado==null){
+                document.write("Não encontrado");
+            }else{
+                document.write(resultado[0]+"<br>");
+                document.write(resultado.length);
+            }
+                
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

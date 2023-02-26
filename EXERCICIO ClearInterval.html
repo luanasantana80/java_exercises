@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>CURSO JAVASCRIPT</title>
+        <meta charset="UTF-8">
+        <script>
+            var cores=["#FOO","#OFO","#OOF","#FFO","#OFF","#FOF","#OOO","#FFF"];
+            var i=0;
+            var timer=setInterval(mudaCorFundo,1000);
+            function mudaCorFundo(){
+                document.body.style.backgroundColor=cores[i];
+                i++;
+                if(i>=cores.length){
+                    i=0;
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</hmtl>

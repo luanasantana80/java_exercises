@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>curso de JavaScript</title>
+        <meta charset="UTF-8">
+        <script>
+            function valida(){
+                if(document.f_aula.f_senha.value==""){
+                    alert("Digite uma senha! ");
+                    document.getElementById("f_isenha").focus();
+                    return false;
+                }
+                if(document.f_aula.f_nova.value==""){
+                    alert("Digite a mesma senha que a de cima! ");
+                    document.getElementById("f_inova").focus();
+                    return false;
+                }
+                if(document.f_aula.f_nova.value!=document.f_aula.f_senha.value){
+                    alert("AMBAS DEVEM SER IGUAIS! ");
+                    document.getElementById("f_inova").focus();
+                    document.getElementById("f_isenha").focus();
+                    return false;
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form name="f_aula" method="#" action="#" onsubmit="return valida()">
+            <label> CPF:<label><br>
+            <input type="number" name="f_cpf" id="f_icpf" maxlength="20"><br>
+            <br>
+            <br>
+            <input type="submit" value="gravar">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html> 
+<html lang="pt-br">
+	<head>
+		<title>Curso javascript</title>
+		<meta chatset="UTF-8">
+		<script>
+           function imc(nome, peso, altura){
+               resu=(peso/(altura*altura));
+               document.write("O IMC de "+nome+" é: "+resu);
+           }
+        </script>
+	</head>
+	<body>
+        <form name="teste" action="">
+            <label> Nome: <input type="text" name="nome"></label>
+            <p><label> Peso: <input type="number" name="peso"></label>
+            <p><label> Altura: <input type="number" name="altura" min="1.0" max="2.0" step="0.5"></label>
+            <p><input type="button" value="Calcular IMC" onclick=imc(nome.value,peso.value,altura.value)>
+            <p><input type="reset" value="Limpar">
+    </body>
+</html>

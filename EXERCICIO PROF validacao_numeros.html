@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset="UTF-8">
+		<script>
+			function checkNumber(valor) {
+				var regra = /^[0-9]+$/;
+				if (valor.match(regra)) {
+					alert("Numero: "+valor);
+				}else{
+					alert("Permitido somente números");
+				}
+				//document.write("Ola");
+			}
+
+		</script>
+	</head>
+	<body>
+		<form name="teste">
+		<label> Número: </label><input type="text" value="" onblur="checkNumber(this.value)";>
+		<label> Nome: </label><input type="text">
+		</form>
+	</body>
+</html>

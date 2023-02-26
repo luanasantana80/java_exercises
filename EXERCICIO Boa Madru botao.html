@@ -1,0 +1,33 @@
+<!doctype html> 
+<html lang="pt-br">
+	<head>
+		<title>Curso javascript</title>
+		<meta chatset="UTF-8">
+		<script>
+            function cumprimento(){
+                var data=new Date();
+                hora=data.getHours();
+                if((hora>=6)&&(hora<=12)){
+                    alert("Bom Dia!");
+                }else if ((hora>12)&&(hora<18)){
+                    alert("Boa Tarde!")
+                }else if(hora>=18){
+                    alert("Boa Noite!")
+                }else{
+                    alert("Boa Madrugada!");
+                }
+            }
+            function msg1(){
+                alert("Voce clicou no botão!! ");
+            }
+            function msg2(){
+                alert("Cursor passou sobre a imagem! ")
+            }
+        </script>
+	</head>
+	<body onload="cumprimento()">
+        <input type="button" value="Clique-me" onclick="msg1()">
+        <br>
+        <img src="#" alt="Falha no carregamento" onmouseover="msg2()">
+    </body>
+</html>

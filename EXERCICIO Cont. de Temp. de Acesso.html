@@ -1,0 +1,32 @@
+<!doctype html> 
+<html lang="pt-br">
+	<head>
+		<title>Curso javascript</title>
+		<meta chatset="UTF-8">
+        <script>
+            dia = new Date();
+            hora = dia.getTime();
+            function initStopwatch(){
+                var myTime = new Date();
+                var timeNow = myTime.getTime();
+                var timeDiff = timeNow - hora;
+                this.diffSecs = timeDiff/1000;
+                return(this.diffSecs);
+            }
+            function getSecs(){
+                var mySecs = initStopwatch();
+                var mySecs1 = ""+mySecs;
+                mySecs1=mySecs1.substring(0,mySecs1.indexOf("."))+" segundos(s)";
+                document.forms[0].timespent.value=mySecs1
+                window.setTimeout('getSecs()',1000);
+            }   
+        </script>
+	</head>
+	<body onLoad="window.setTimeout('getSecs()',1)">
+        <h1>Exemplo</h1>
+        <p align="center"><font size="+2"><b>Voce esta aqui a: </font></b></p>
+            <form>
+                <div align="center"><center><p><input name="timespent"></center></div>
+            </form>
+    </body>
+</html>
